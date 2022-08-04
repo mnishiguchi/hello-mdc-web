@@ -3,7 +3,6 @@ const autoprefixer = require('autoprefixer')
 // https://material.io/develop/web/getting-started
 module.exports = [
   {
-    mode: 'development',
     entry: ['./assets/scss/app.scss', './assets/js/app.js'],
     output: {
       filename: 'bundle.js'
