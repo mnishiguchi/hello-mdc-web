@@ -2,16 +2,78 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="stylesheet" href="bundle.css">
+  <style>
+    body {
+      width: 100vw;
+    }
+
+    .container {
+      padding: 0 2rem;
+    }
+
+    button:not(.is-fullwidth) {
+      margin: 0 .5rem;
+    }
+
+  </style>
 </head>
 
 <body>
   <h1>Hello World</h1>
 
-  <button class="mdc-button foo-button">
-    <div class="mdc-button__ripple"></div>
-    <span class="mdc-button__label">Button</span>
-  </button>
+  <h2>Buttons</h2>
+
+  <main class="container">
+    <div style="margin-bottom: 2rem">
+      <button class="mdc-button is-primary">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Primary</span>
+      </button>
+
+      <button class="mdc-button is-secondary">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Secondary</span>
+      </button>
+
+      <button class="mdc-button is-tertiary">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Tertiary</span>
+      </button>
+
+      <button class="mdc-button is-link">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Link</span>
+      </button>
+    </div>
+
+    <div style="margin-bottom: 2rem">
+      <button class="mdc-button is-primary is-small">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Small</span>
+      </button>
+
+      <button class="mdc-button is-primary">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Medium</span>
+      </button>
+
+      <button class="mdc-button is-primary is-large">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Large</span>
+      </button>
+    </div>
+
+    <div style="margin-bottom: 2rem">
+      <button class="mdc-button is-primary is-fullwidth">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Full width</span>
+      </button>
+    </div>
+  </main>
 
   <script src="bundle.js" async></script>
 </body>

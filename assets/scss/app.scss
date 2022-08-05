@@ -1,10 +1,62 @@
+// https://material.io/develop/web/theming/color
+@use '@material/theme' with (
+  $primary: #1e39d2
+);
+
 @use '@material/button/mdc-button';
 @use '@material/button';
+
+$red: #f13b04;
 
 body {
   text-align: center;
 }
 
-.foo-button {
-  @include button.container-fill-color(#ddd);
+//
+// button
+// - docs: https://material.io/components/buttons/web
+// - examples: https://material-components.github.io/material-web/demos/button/
+//
+
+@mixin custom-button-mixin {
+  font-weight: 600;
+  text-transform: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  height: 2.5rem;
+}
+
+.mdc-button {
+  &.is-primary {
+    @include custom-button-mixin;
+    @extend .mdc-button--raised;
+  }
+
+  &.is-secondary {
+    @include custom-button-mixin;
+    @extend .mdc-button--outlined;
+  }
+
+  &.is-tertiary {
+    @include custom-button-mixin;
+    @include button.container-fill-color($red);
+    @extend .mdc-button--raised;
+  }
+
+  &.is-link {
+    @include custom-button-mixin;
+  }
+
+  &.is-small {
+    height: 2rem;
+    font-size: 0.75rem;
+  }
+
+  &.is-large {
+    height: 3rem;
+  }
+
+  &.is-fullwidth {
+    width: 100%;
+  }
 }
